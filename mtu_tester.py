@@ -64,9 +64,9 @@ for mtu in MTU_RANGE:
                 else:
                     times.append(float("inf"))
                     print("    ❌ Response error", flush=True)
-            except Exception:
+            except requests.exceptions.RequestException:
                 times.append(float("inf"))
-                print("    ❌ Exception", flush=True)
+                print("    ❌ RequestException", flush=True)
 
         times = [t for t in times if t != float("inf")]
         if times:
