@@ -1,4 +1,8 @@
-import subprocess, time, statistics, requests, argparse
+import subprocess
+import time
+import statistics
+import requests
+import argparse
 from ping3 import ping
 
 # --- CLI setup ---
